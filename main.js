@@ -8,7 +8,7 @@ app.once('ready', () => {
   mainWindow = new browserWindow({
     width: 1280,
     height: 720,
-    alwaysOnTop: true,
+    resizable: true,
     frame: false,
     useContentSize: true,
     webPreferences: {
@@ -30,4 +30,8 @@ ipcMain.on('close', () => {
 
 ipcMain.on('minimize', () => {
   mainWindow.minimize()
+})
+
+ipcMain.on('toggleOverlay', () => {
+  mainWindow.setAlwaysOnTop(!mainWindow.isAlwaysOnTop())
 })
