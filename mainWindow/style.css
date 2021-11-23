@@ -1,0 +1,57 @@
+html {
+  overflow: hidden;
+}
+body{
+  background-color: #EEEEEEEE;
+  margin: 0;
+}
+#time_display{
+  font-family: 'Noto Sans JP',
+  sans-serif;
+  font-size: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #444444;
+  -webkit-app-region: drag;
+  user-select: none;
+}
+#clock_container{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#windowInterface {
+  display: flex;
+  width: auto;
+  margin-left: 2px;
+  height: auto;
+  position: absolute;
+  z-index: 99999;
+  z-index: 4;
+  top: 0.5px;
+  right: 0px;
+  color: #444444;
+  font-size: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 600ms 0s ease;
+}
+
+#close_button {
+  -webkit-app-region: no-drag;
+  margin-left: 3.5px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+#minimize {
+  -webkit-app-region: no-drag;
+  display: block;
+  margin-left: 3.5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
